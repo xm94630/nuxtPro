@@ -65,18 +65,24 @@ module.exports =
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(6);
+module.exports = __webpack_require__(7);
 
 
 /***/ },
 /* 1 */
+/***/ function(module, exports) {
+
+module.exports = require("koa-router");
+
+/***/ },
+/* 2 */
 /***/ function(module, exports) {
 
 module.exports = {
@@ -117,13 +123,13 @@ module.exports = {
 };
 
 /***/ },
-/* 2 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_xuming_Desktop_nuxt_learn_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_xuming_Desktop_nuxt_learn_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_xuming_Desktop_nuxt_learn_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_router__);
 
 
@@ -143,7 +149,9 @@ router.get('/list', function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            ctx.body = ['上海', '北京'];
+            ctx.body = {
+              list: ['默认城市上海', '默认城市北京']
+            };
 
           case 1:
           case 'end':
@@ -161,42 +169,83 @@ router.get('/list', function () {
 /* harmony default export */ exports["a"] = router;
 
 /***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-module.exports = require("koa");
-
-/***/ },
 /* 4 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-module.exports = require("nuxt");
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_xuming_Desktop_nuxt_learn_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_xuming_Desktop_nuxt_learn_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_xuming_Desktop_nuxt_learn_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_router__);
+
+
+var _this = this;
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+
+
+var router = new __WEBPACK_IMPORTED_MODULE_1_koa_router___default.a({
+  prefix: '/city'
+});
+
+router.get('/list2', function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_xuming_Desktop_nuxt_learn_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx) {
+    return __WEBPACK_IMPORTED_MODULE_0__Users_xuming_Desktop_nuxt_learn_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            ctx.body = {
+              list: ['绍兴', '上虞']
+            };
+
+          case 1:
+          case 'end':
+            return _context.stop();
+        }
+      }
+    }, _callee, _this);
+  }));
+
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}());
+
+/* harmony default export */ exports["a"] = router;
 
 /***/ },
 /* 5 */
 /***/ function(module, exports) {
 
-module.exports = require("koa-router");
+module.exports = require("koa");
 
 /***/ },
 /* 6 */
 /***/ function(module, exports) {
 
-module.exports = require("regenerator-runtime");
+module.exports = require("nuxt");
 
 /***/ },
 /* 7 */
+/***/ function(module, exports) {
+
+module.exports = require("regenerator-runtime");
+
+/***/ },
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_xuming_Desktop_nuxt_learn_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_xuming_Desktop_nuxt_learn_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_xuming_Desktop_nuxt_learn_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nuxt__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nuxt__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nuxt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_nuxt__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interface_city__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interface_city__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__interface_city2__ = __webpack_require__(4);
 
 
 var start = function () {
@@ -212,7 +261,7 @@ var start = function () {
 
             // Import and Set Nuxt.js options
 
-            config = __webpack_require__(1);
+            config = __webpack_require__(2);
 
             config.dev = !(app.env === 'production');
 
@@ -232,6 +281,7 @@ var start = function () {
 
           case 10:
 
+            app.use(__WEBPACK_IMPORTED_MODULE_4__interface_city2__["a" /* default */].routes()).use(__WEBPACK_IMPORTED_MODULE_4__interface_city2__["a" /* default */].allowedMethods());
             app.use(__WEBPACK_IMPORTED_MODULE_3__interface_city__["a" /* default */].routes()).use(__WEBPACK_IMPORTED_MODULE_3__interface_city__["a" /* default */].allowedMethods());
             // app.use(cityInterface.routes())
 
@@ -245,7 +295,7 @@ var start = function () {
             app.listen(port, host);
             console.log('Server listening on ' + host + ':' + port); // eslint-disable-line no-console
 
-          case 14:
+          case 15:
           case 'end':
             return _context.stop();
         }
@@ -259,6 +309,7 @@ var start = function () {
 }();
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
 
 
 

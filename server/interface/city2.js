@@ -4,9 +4,9 @@ const router = new Router({
   prefix: '/city'
 })
 
-router.get('/list', async (ctx) => {
+router.get('/list2', async (ctx) => {
   ctx.body = {
-    list: ['默认城市上海', '默认城市北京']
+    list: ['绍兴', '上虞']
   }
 })
 

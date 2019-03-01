@@ -1,6 +1,7 @@
 import Koa from 'koa'
 import { Nuxt, Builder } from 'nuxt'
 import cityInterface from './interface/city'
+import cityInterface2 from './interface/city2'
 
 async function start () {
   const app = new Koa()
@@ -20,6 +21,7 @@ async function start () {
     await builder.build()
   }
 
+  app.use(cityInterface2.routes()).use(cityInterface2.allowedMethods())
   app.use(cityInterface.routes()).use(cityInterface.allowedMethods())
   // app.use(cityInterface.routes())
 

@@ -4,6 +4,9 @@
     <ul>
       <li v-for="(one,idx) in list" :key="idx" >{{one}}</li>
     </ul>
+    <ul>
+      <li v-for="(one,idx) in $store.state.city.list" :key="'xxx'+idx" >{{one}}</li>
+    </ul>
   </section>
 </template>
 <script>

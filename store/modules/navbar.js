@@ -4,13 +4,13 @@ const state = () => ({
 })
 
 const mutations = {
-  add(store, text) {
-    return store.app.push(text)
+  add(state, text) {
+    state.app.push(text)
   }
 }
 
-const action = {
-  add({commit, text}) {
+const actions = {
+  add({commit}, text) {
     commit('add', text)
   }
 }
@@ -19,5 +19,5 @@ export default{
   namespaced: true,
   state,
   mutations,
-  action
+  actions
 }

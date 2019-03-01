@@ -1,16 +1,16 @@
 // 注意这里的后面的（）不要忘记写
 const state = () => ({
-  list: []
+  list: ['奥特曼', '小怪兽']
 })
 
 const mutations = {
-  add(store, text) {
-    return store.list.push(text)
+  add(state, text) {
+    state.list.push(text)
   }
 }
 
-const action = {
-  add({commit, text}) {
+const actions = {
+  add({commit}, text) {
     commit('add', text)
   }
 }
@@ -19,5 +19,5 @@ export default{
   namespaced: true,
   state,
   mutations,
-  action
+  actions
 }

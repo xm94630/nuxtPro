@@ -20,8 +20,8 @@ async function start () {
     await builder.build()
   }
 
-  //app.use(cityInterface.routes()).use(cityInterface.allowMethods())
-  app.use(cityInterface.routes())
+  app.use(cityInterface.routes()).use(cityInterface.allowedMethods())
+  // app.use(cityInterface.routes())
 
   app.use(ctx => {
     ctx.status = 200

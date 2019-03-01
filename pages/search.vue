@@ -1,5 +1,5 @@
 <template>
-  <section class="">
+  <section>
     {{ name }}
     <ul>
       <li v-for="(one,idx) in list" :key="idx" >{{one}}</li>
@@ -9,6 +9,7 @@
     </ul>
   </section>
 </template>
+
 <script>
 import axios from "axios"
 export default {
@@ -24,6 +25,7 @@ export default {
   },
   data(){
     return {
+      name:'', //这个要有，否者会报一个警告，挺难受的。
       list:[]
     }
   },
